@@ -14,6 +14,7 @@ use Nip\Inflector\Traits\InflectionTableizeTrait;
 use Nip\Inflector\Traits\InflectionUnclasifyTrait;
 use Nip\Inflector\Traits\InflectionUnderscoreTrait;
 use Nip\Inflector\Traits\MagicMethodsTrait;
+use Nip\Inflector\Traits\SingletonTrait;
 
 /**
  * Class Inflector
@@ -22,6 +23,7 @@ use Nip\Inflector\Traits\MagicMethodsTrait;
  */
 class Inflector
 {
+    use SingletonTrait;
     use HasCacheTrait;
     use HasDictionaryTrait;
     use MagicMethodsTrait;

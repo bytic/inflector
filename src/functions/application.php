@@ -6,6 +6,9 @@ if (!function_exists('inflector')) {
      */
     function inflector()
     {
-        return app('inflector');
+        if (function_exists('app')) {
+            return app('inflector');
+        }
+        return \Nip\Inflector\Inflector::instance();
     }
 }

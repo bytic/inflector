@@ -2,6 +2,11 @@
   <dictionary name="Solomon">
     <words>
       <w>Inflector</w>
+      <w>Ordinalize</w>
+      <w>Singularize</w>
+      <w>hyphenize</w>
+      <w>inflector</w>
+      <w>unclassify</w>
     </words>
   </dictionary>
 </component>

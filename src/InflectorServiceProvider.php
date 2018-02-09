@@ -17,7 +17,7 @@ class InflectorServiceProvider extends AbstractSignatureServiceProvider
     {
         $this->getContainer()->share('inflector', function () {
             $inflector = new Inflector();
-            $path = app('path.storage') . DIRECTORY_SEPARATOR . 'cache';
+            $path = $this->getContainer()->get('path.storage') . DIRECTORY_SEPARATOR . 'cache';
             $inflector->setCachePath($path);
             return $inflector;
         });

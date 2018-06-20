@@ -10,7 +10,6 @@ namespace Nip\Inflector\Traits;
  */
 trait HasDictionaryTrait
 {
-
     protected static $dictionary;
 
     /**

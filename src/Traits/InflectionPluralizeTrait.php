@@ -10,7 +10,6 @@ namespace Nip\Inflector\Traits;
  */
 trait InflectionPluralizeTrait
 {
-
     protected $plural = [
         '/(s)tatus$/i' => '\1tatuses',
         '/(quiz)$/i' => '\1zes',

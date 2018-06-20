@@ -10,7 +10,6 @@ namespace Nip\Inflector\Traits;
  */
 trait InflectionSingularizeTrait
 {
-
     protected $singular = [
         'rules' => [
             '/(s)tatuses$/i' => '\1\2tatus',

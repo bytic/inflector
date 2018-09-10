@@ -19,9 +19,14 @@ trait InflectionClassifyTrait
      */
     protected function doClassify($string)
     {
-        $parts = explode("-", $string);
-        $parts = array_map([$this, "camelize"], $parts);
+        $partsNamespace = explode('\\', $string);
+        $return = [];
+        foreach ($partsNamespace as $partNamespace) {
+            $parts = explode("-", $partNamespace);
+            $parts = array_map([$this, "camelize"], $parts);
 
-        return implode("_", $parts);
+            $return[] = implode("_", $parts);
+        }
+        return implode('\\', $return);
     }
 }

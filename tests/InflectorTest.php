@@ -19,19 +19,6 @@ class InflectorTest extends AbstractTest
     /**
      * @return array
      */
-    public function providerClassTable()
-    {
-        return [
-            ["users", "Users"],
-            ["user_groups", "UserGroups"],
-            ["acl-permissions", "Acl_Permissions"],
-            ["user_groups-users", "UserGroups_Users"],
-        ];
-    }
-
-    /**
-     * @return array
-     */
     public function providerURLController()
     {
         return [
@@ -54,23 +41,13 @@ class InflectorTest extends AbstractTest
     }
 
     /**
-     * @dataProvider providerClassTable
-     * @param $table
-     * @param $class
-     */
-    public function testTableToClass($table, $class)
-    {
-        self::assertEquals($class, $this->inflector->classify($table));
-    }
-
-    /**
      * @dataProvider providerURLController
      * @param $url
      * @param $controller
      */
     public function testURLToController($url, $controller)
     {
-        self::assertEquals($controller, $this->inflector->classify($url)."Controller");
+        self::assertEquals($controller, $this->inflector->classify($url) . "Controller");
     }
 
     /**
@@ -96,6 +73,7 @@ class InflectorTest extends AbstractTest
 
     protected function setUp()
     {
+        parent::setUp();
         $this->inflector = new Inflector();
     }
 }

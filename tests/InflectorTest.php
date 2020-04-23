@@ -71,7 +71,7 @@ class InflectorTest extends AbstractTest
         self::assertEquals("companies", $this->inflector->pluralize("companies"));
     }
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
         $this->inflector = new Inflector();

@@ -37,6 +37,7 @@ class InflectorTest extends AbstractTest
      */
     public function testClassToTable($table, $class)
     {
+        $table = strtolower(str_replace('\\', '-', $table));
         self::assertEquals($table, $this->inflector->unclassify($class));
     }
 

@@ -4,8 +4,11 @@ if (!function_exists('inflector')) {
     /**
      * @return Nip\Inflector\Inflector
      */
-    function inflector()
+    function inflector(): \Nip\Inflector\Inflector
     {
-        return app('inflector');
+        if (function_exists('app') && app()->has('inflector')) {
+            return app('inflector');
+        }
+        return \Nip\Inflector\Inflector::instance();
     }
 }
